@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login and Registration Form </title>
+	<link rel="stylesheet" type="text/css" href="logs.css">
+</head>
+<body>
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn">
+
+				</div>
+				<button type="button" class="toggle-btn" onclick="login()">Log in</button>
+				<button type="button" class="toggle-btn" onclick="sign()">Sign up</button>
+			</div>
+			<div class="social-icons">
+			<a href="https://www.facebook.com/"><img src="fb.png"></a>
+			<a href="https://www.google.co.in/"><img src="g.png"></a>
+		</div>
+		<form id="login" class="input-grp" >
+			<input type="text" class="input-field" placeholder="User Id" name="userId" required >
+			<input type="text" class="input-field" placeholder="Enter Password" name="password" required >
+			<input type="checkbox" class="check-box"><span>Remember Password</span>
+			
+			<button type="Submit" class="submit-btn">
+				<a href="file:///C:/xampp/htdocs/connect/Fdashboard/index.html">Log in</a>
+			</button>
+
+		</form>
+		<form id="sign" class="input-grp" action="connect.php" method = "POST">
+			<input type="text" class="input-field" placeholder="User Id" name="enterId" required>
+			<input type="text" class="input-field" placeholder="E-mail" name="enterEmail"  required >
+			<input type="text" class="input-field" placeholder="Enter Password" name="enterPassword"  required>
+			<input type="checkbox" class="check-box"><span>Agree to the terms</span>
+			<button type="Submit" class="submit-btn" <a href= "file:///C:/xampp/htdocs/connect/Fdashboard/index.html"> Sign Up </a></button> 
+		</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var x = document.getElementById("login");
+		var y = document.getElementById("sign");
+		var z = document.getElementById("btn");
+		function sign(){
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+		function login(){
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0";
+		}
+	</script>
+
+</body>
+</html>
